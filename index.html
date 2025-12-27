@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Image Fit</title>
+    <title>Full Image Display</title>
     <style>
+        /* Remove all margins and scrollbars */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            /* Black background fills the gaps if the image aspect ratio 
-               doesn't match the screen aspect ratio */
-            background-color: #000; 
-            overflow: hidden;
+            background-color: #ffffff; /* Sets the rest of the screen to white */
+            overflow: hidden; /* Keeps the screen clean */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .fullscreen-bg {
-            background-image: url('HB.jpg');
-            height: 100vh;
+        img {
+            /* This tells the image to be exactly as big as the screen... */
             width: 100vw;
+            height: 100vh;
 
-            /* "contain" ensures the whole image is visible without cropping */
-            background-size: contain;
-            
-            /* Keeps the image in the dead center */
-            background-position: center;
-            background-repeat: no-repeat;
+            /* ...but "contain" forces it to stay whole and not crop */
+            object-fit: contain;
+
+            /* Ensures the image is crisp */
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="fullscreen-bg"></div>
+    <img src="HB.JPG" alt="Background Image">
 
+</body>
+</html>
 </body>
 </html>

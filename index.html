@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Background Site</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url('HB.JPG');
+
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            /* Keeps the background fixed during scroll */
+            background-attachment: fixed;
+
+            /* Overlay to make text more readable */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.8); /* White semi-transparent box */
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 80%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="content">
+            <h1>Welcome to My Website</h1>
+            <p>This background is fully responsive and uses HB.JPG.</p>
+        </div>
+    </div>
+
+</body>
+</html>
